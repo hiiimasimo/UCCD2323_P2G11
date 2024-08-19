@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malaysia</title>
+    <link rel="stylesheet" href="css/land.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="homepage.html" class="nav__logo">
+        <img src="image//LOGO.png" alt="Logo">
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="AboutMalaysia.html" class="nav__link">About Malaysia</a></li>
+          <li class="nav__item"><a href="land.html" class="nav__link">Land Activities</a></li>
+          <li class="nav__item"><a href="WaterActivities.html" class="nav__link">Water Activities</a></li>
+          <li class="nav__item"><a href="cultural.html" class="nav__link">Cultural Activities</a></li>
+          <li class="nav__item"><a href="UrbanActivities.html" class="nav__link">Urban Activities</a></li>
+          <li class="nav__item"><a href="ContactUs.html" class="nav__link">Contact Us</a></li>
+          <li class="nav__item"><a href="Weather.html" class="nav__link">Weather Tips</a></li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+      </div>
+  
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="subnav">
+    <ul class="subnav__list">
+      <li class="subnav__item"><a href="#activities" class="nav__link">Land Activities</a></li>
+      <li class="subnav__item"><a href="#hiking" class="nav__link">Hiking</a></li>
+      <li class="subnav__item"><a href="#national-parks" class="nav__link">National Parks</a></li>
+      <li class="subnav__item"><a href="#caving" class="nav__link">Caving</a></li>
+      <li class="subnav__item"><a href="#glamping" class="nav__link">Glamping</a></li>
+    </ul>
+  </nav>
+  
+    <main class="main">
+        <section id="home" class="home section">
+            <img src="image/LandACulture/home.jpg" alt="Malaysia landscape" class="home__bg"> 
+            <div class="home__shadow"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h3 class="home__subtitle">Welcome to Malaysia</h3>
+                    <h1 class="home__title">Explore Malaysia</h1>
+                    <p class="home__description">
+                        Discover the wonders of Malaysia - a land of diverse cultures, stunning landscapes, and thrilling adventures. From lush rainforests to pristine beaches, Malaysia offers a plethora of experiences for every traveler.
+                    </p>
+                    <a href="#activities" class="button">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Land Activities Section -->
+<section id="activities" class="section activities section">
+    <h2 class="section__title">Land Activities in Malaysia</h2>
+    <div class="activities__container container grid">
+      <div class="activity__card" data-activity="hiking">
+        <img src="image/LandACulture/hiking.jpg" alt="Hiking" class="activity__img">
+        <h3 class="activity__title">Hiking</h3>
+        <p>Explore diverse trails from tropical rainforests to mountain peaks.</p>
+      </div>
+      <div class="activity__card" data-activity="national-parks">
+        <img src="image/LandACulture/national-park.jpg" alt="National Parks" class="activity__img">
+        <h3 class="activity__title">National Parks</h3>
+        <p>Discover Malaysia's rich biodiversity in stunning natural reserves.</p>
+      </div>
+      <div class="activity__card" data-activity="caving">
+        <img src="image/LandACulture/cave.jpg" alt="Caving" class="activity__img">
+        <h3 class="activity__title">Caving</h3>
+        <p>Uncover underground wonders in Malaysia's vast cave systems.</p>
+      </div>
+      <div class="activity__card" data-activity="glamping">
+        <img src="image/LandACulture/glamping.jpg" alt="Glamping" class="activity__img">
+        <h3 class="activity__title">Glamping</h3>
+        <p>Experience luxury camping amidst Malaysia's natural beauty.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Hiking Section -->
+  <section id="hiking" class="section hiking section">
+    <div class="hiking__container container grid">
+      <div class="hiking__data">
+        <h2 class="section__title">Discover Malaysia's Trails</h2>
+        <p>From challenging mountain treks to peaceful forest walks, Malaysia offers diverse hiking experiences for all levels of adventurers.</p>
+        <button id="discover-trails-btn" class="button">Discover Trails</button>
+      </div>
+      <div class="hiking__image">
+        <img src="image/LandACulture/hiking.jpg" alt="Hiking in Malaysia" class="hiking__img">
+      </div>
+    </div>
+    <div id="trail-info" class="info-section hidden"></div>
+  </section>
+  
+  <!-- National Parks Section -->
+  <section id="national-parks" class="section parks section">
+    <div class="parks__container container grid">
+      <div class="parks__data">
+        <h2 class="section__title">Explore Malaysia's National Parks</h2>
+        <p>Immerse yourself in Malaysia's natural wonders, from tropical rainforests to marine parks teeming with life.</p>
+        <button id="discover-parks-btn" class="button">Discover National Parks</button>
+      </div>
+      <div class="parks__image">
+        <img src="image/LandACulture/national-park.jpg" alt="National Parks in Malaysia" class="parks__img">
+      </div>
+    </div>
+    <div id="parks-info" class="info-section hidden"></div>
+  </section>
+  
+  <!-- Caving Section -->
+  <section id="caving" class="section caving section">
+    <div class="caving__container container grid">
+      <div class="caving__data">
+        <h2 class="section__title">Uncover Malaysia's Underground Wonders</h2>
+        <p>Delve into the mysterious world beneath Malaysia's surface, exploring geological marvels formed over millions of years.</p>
+       <button id="discover-caves-btn" class="button">Discover Caves</button>
+      </div>
+      <div class="caving__image">
+        <img src="image/LandACulture/cave.jpg" alt="Caving in Malaysia" class="caving__img">
+      </div>
+    </div>
+    <div id="caves-info" class="info-section hidden"></div>
+  </section>
+  
+  <!-- Glamping Section -->
+  <section id="glamping" class="section glamping section">
+    <div class="glamping__container container grid">
+      <div class="glamping__data">
+        <h2 class="section__title">Experience Luxury in Nature</h2>
+        <p>Enjoy the best of both worlds with glamping in Malaysia, immersing yourself in nature without sacrificing comfort.</p>
+        <button id="discover-glamping-btn" class="button">Discover Glamping Sites</button>
+      </div>
+      <div class="glamping__image">
+        <img src="image/LandACulture/glamping.jpg" alt="Glamping in Malaysia" class="glamping__img">
+      </div>
+    </div>
+    <div id="glamping-info" class="info-section hidden"></div>
+  </section>
+
+    </main>
+
+    <a href="#" id="scroll-up" class="scrollup">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="javascript/land.js"></script>
+</body>
+</html>

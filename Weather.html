@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Tips</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #20242f;
+        }
+        .container {
+            margin-top: 20px;
+            color: #fff;
+        }
+        .weather-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #20242f;
+            border-radius: 10px;
+
+        }
+        .weather-info img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            display: none;
+        }
+        #cookie-consent button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+   
+        <!-- Navigation Bar -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 secNavBar">
+                    <div class="navigationBarInnerContent">
+                        <a class="LOGO" href="homepage.html">
+                            <img src="image/LOGO.png" alt="Travel" title="Let's go travel" class="img-fluid">
+                        </a>
+                        <div class="nav_tab">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                            <a class="navBarLinkClass" href="AboutMalaysia.html" title="About Us">About Malaysia</a>
+                            <a class="navBarLinkClass" href="land.html" title="Land Activities">Land Activities</a>
+                            <a class="navBarLinkClass" href="WaterActivities.html" title="Weather Activities">Weather Activities</a>
+                            <a class="navBarLinkClass" href="cultural.html" title="Cultural Activities">Cultural Activities</a>
+                            <a class="navBarLinkClass" href="UrbanActivities.html" title="Urban Activities">Urban Activities</a>
+                            <a class="navBarLinkClass" href="Weather.html" title="Weather Tips">Weather Tips</a>
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Navigation Bar -->
+        <div class="container-fluid secNavBarMobileVersion">
+            <div class="row">
+                <div class="col-md-12 p-0">
+                    <div class="navBarDisplayFlex">
+                        <div class="hamburgerMenuSection" onclick="openNav()">
+                            <span class="designForMenuButton">&#9776;</span>
+                        </div>
+                        <div class="logoSecion">
+                            <a class="Logo" href="homepage.html">
+                                <img src="image/LOGO.png" alt="Travel" title="Travel in Malaysia" class="img-fluid mobileVersion_Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_tab" id="mobileVerNavBar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                    <a class="navBarLinkClass" href="AboutMalaysia.html" title="About Us">About Malaysia</a>
+                    <a class="navBarLinkClass" href="land.html" title="Land Activities">Land Activities</a>
+                    <a class="navBarLinkClass" href="WaterActivities.html" title="Weather Activities">Weather Activities</a>
+                    <a class="navBarLinkClass" href="cultural.html" title="Cultural Activities">Cultural Activities</a>
+                    <a class="navBarLinkClass" href="UrbanActivities.html" title="Urban Activities">Urban Activities</a>
+                    <a class="navBarLinkClass" href="Weather.html" title="Weather Tips">Weather Tips</a>
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="container">
+        <h1 class="text-center">Weather Tips in Malaysia</h1>
+        <div class="form-group">
+            <label for="month-select">Select a Month:</label>
+            <select class="form-control" id="month-select">
+                <option value="March to May">March to May</option>
+                <option value="June to August">June to August</option>
+                <option value="September to November">September to November</option>
+                <option value="December to February">December to February</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="region-select">Select a Region:</label>
+            <select class="form-control" id="region-select">
+                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                <option value="West Coast">West Coast</option>
+                <option value="Borneo">Borneo</option>
+                <option value="Cameron Highlands">Cameron Highlands</option>
+            </select>
+        </div>
+
+        <button id="get-weather" class="btn btn-primary">Get Weather Tips</button>
+
+        <div class="weather-info" id="weather-result"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent">
+        <p>We use cookies to ensure you get the best experience on our website. <button id="accept-cookies">Accept</button></p>
+    </div>
+
+    <script>
+        // Weather Tips Code
+        document.getElementById('get-weather').addEventListener('click', function() {
+            const month = document.getElementById('month-select').value;
+            const region = document.getElementById('region-select').value;
+            let weatherCondition = '';
+
+            const weatherData = {
+                'Kuala Lumpur': {
+                    'March to May': { high: 33, low: 24, tips: 'Expect hot and humid conditions. Carry an umbrella for daily showers.', image: 'image/Weather/kl_hot_weather.jpg' },
+                    'June to August': { high: 32, low: 24, tips: 'Hot and humid. Slightly drier but still carry an umbrella.', image: 'image/Weather/kl_moderate_weather.jpg' },
+                    'September to November': { high: 32, low: 23, tips: 'Heavy rains expected. Avoid outdoor activities.', image: 'image/Weather/kl_rainy_weather.jpg' },
+                    'December to February': { high: 32, low: 23, tips: 'Expect heavy rains. Best to stay indoors.', image: 'image/Weather/kl_heavy_rainy_weather.jpg' }
+                },
+                'West Coast': {
+                    'March to May': { high: 32, low: 25, tips: 'Humid and rainy. Carry rain gear.', image: 'image/Weather/wc_rainy_weather.jpg' },
+                    'June to August': { high: 31, low: 24, tips: 'Humid with less rain. Great time for outdoor activities.', image: 'image/Weather/wc_moderate_weather.jpg' },
+                    'September to November': { high: 31, low: 24, tips: 'Heavy rains. Avoid outdoor activities.', image: 'image/Weather/wc_heavy_rainy_weather.jpg' },
+                    'December to February': { high: 32, low: 24, tips: 'Mostly dry and sunny. Perfect for travel.', image: 'image/Weather/wc_sunny_weather.jpeg' }
+                },
+                'Borneo': {
+                    'March to May': { high: 31, low: 24, tips: 'Hot and humid. Expect rain. Carry an umbrella or raincoat.', image: 'image/Weather/borneo_march_weather.jpg' },
+                    'June to August': { high: 33, low: 24, tips: 'Hot and humid with possible showers. Stay hydrated.', image: 'image/Weather/borneo_june_weather.jpg' },
+                    'September to November': { high: 32, low: 23, tips: 'Heavy rains expected. Avoid outdoor activities.', image: 'image/Weather/borneo_sep_weather.jpg' },
+                    'December to February': { high: 31, low: 23, tips: 'Wet season. Expect rain daily. Prepare for muddy conditions.', image: 'image/Weather/borneo_dec_weather.jpg' }
+                },
+                'Cameron Highlands': {
+                    'March to May': { high: 24, low: 15, tips: 'Cool and pleasant. Perfect for outdoor activities.', image: 'image/Weather/cameron_cool_weather.jpg' },
+                    'June to August': { high: 24, low: 15, tips: 'Cool and pleasant. Ideal time for hiking and sightseeing.', image: 'image/Weather/cameron_june_weather.jpg' },
+                    'September to November': { high: 23, low: 15, tips: 'Expect heavy rains. Landslides are possible, so exercise caution.', image: '.image/Weather/cameron_rainy_weather.jpg' },
+                    'December to February': { high: 23, low: 14, tips: 'Rainy and cool. Best to stay indoors during heavy downpours.', image: 'image/Weather/cameron_dec_weather.jpg' }
+                }
+            };
+
+            if (weatherData[region] && weatherData[region][month]) {
+                weatherCondition = weatherData[region][month];
+                document.getElementById('weather-result').innerHTML = `
+                    <h2>${region} Weather</h2>
+                    <p>Average High: ${weatherCondition.high}°C</p>
+                    <p>Average Low: ${weatherCondition.low}°C</p>
+                    <p>${weatherCondition.tips}</p>
+                    <img src="${weatherCondition.image}" alt="Weather Image">
+                `;
+            } else {
+                document.getElementById('weather-result').innerHTML = '<p>No weather data available for the selected region and month.</p>';
+            }
+        });
+
+        // Cookie Consent Functionality
+        function checkCookieConsent() {
+            if (!getCookie('cookieConsent')) {
+                document.getElementById('cookie-consent').style.display = 'block';
+            }
+        }
+
+        document.getElementById('accept-cookies').addEventListener('click', function() {
+            setCookie('cookieConsent', 'accepted', 30);
+            document.getElementById('cookie-consent').style.display = 'none';
+        });
+
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        checkCookieConsent();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

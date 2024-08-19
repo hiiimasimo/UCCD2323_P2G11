@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malaysia</title>
+    <link rel="stylesheet" href="css/cultural.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="homepage.html" class="nav__logo">
+        <img src="image//LOGO.png" alt="Logo">
+      </a>
+  
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="homepage.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="AboutMalaysia.html" class="nav__link">About Malaysia</a></li>
+          <li class="nav__item"><a href="land.html" class="nav__link">Land Activities</a></li>
+          <li class="nav__item"><a href="WaterActivities.html" class="nav__link">Water Activities</a></li>
+          <li class="nav__item"><a href="cultural.html" class="nav__link">Cultural Activities</a></li>
+          <li class="nav__item"><a href="UrbanActivities.html" class="nav__link">Urban Activities</a></li>
+          <li class="nav__item"><a href="ContactUs.html" class="nav__link">Contact Us</a></li>
+          <li class="nav__item"><a href="Weather.html" class="nav__link">Weather Tips</a></li>
+        </ul>
+  
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+      </div>
+  
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+  
+  <nav class="subnav">
+    <ul class="subnav__list">
+      <li class="subnav__item"><a href="#activities" class="subnav__link">Cultural Activities</a></li>
+      <li class="subnav__item"><a href="#dances" class="subnav__link">Dances</a></li>
+      <li class="subnav__item"><a href="#cooking" class="subnav__link">Cooking</a></li>
+      <li class="subnav__item"><a href="#workshops" class="subnav__link">Workshops</a></li>
+      <li class="subnav__item"><a href="#museum" class="subnav__link">Museums</a></li>
+    </ul>
+  </nav>
+
+    <main class="main">
+        <section id="home" class="home section">
+            <img src="image/LandACulture/cultural-home.jpg" alt="Malaysian cultural scene" class="home__bg">        
+            <div class="home__shadow"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h3 class="home__subtitle">Experience Malaysian Culture</h3>
+                    <h1 class="home__title">Cultural Wonders of Malaysia</h1>
+                    <p class="home__description">
+                        Immerse yourself in the rich tapestry of Malaysia's cultural heritage. Experience the vibrant traditions, age-old customs, and diverse festivals that showcase the unity in diversity of this remarkable nation.
+                    </p>
+                    <a href="#activities" class="button">Explore Cultural Activities<i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!--Cultural Activities Section -->
+    <section id="activities" class="section activities section">
+    <h2 class="section__title">Cultural Activities in Malaysia</h2>
+    <div class="activities__container container grid">
+
+      <div class="activity__card" data-activity="dances">
+        <img src="image/LandACulture/cultural-dances.jpg" alt="Cultural Dances" class="activity__img">
+        <h3 class="activity__title">Cultural Dances</h3>
+        <p>Participate in traditional Malaysian dances and learn their significance.</p>
+      </div>
+      <div class="activity__card" data-activity="cooking">
+        <img src="image/LandACulture/cooking-class.jpg" alt="Cooking Class" class="activity__img">
+        <h3 class="activity__title">Traditional Cooking Class</h3>
+        <p>Learn to cook authentic Malaysian dishes and their cultural importance.</p>
+      </div>
+      <div class="activity__card" data-activity="workshops">
+        <img src="image/LandACulture/cultural-workshop.jpg" alt="Cultural Workshop" class="activity__img">
+        <h3 class="activity__title">Cultural Arts&Crafts Workshop</h3>
+        <p>Explore the traditional arts and crafts of Malaysia, and learn hands-on techniques in batik painting, pottery, and weaving.</p>
+      </div>
+      <div class="activity__card" data-activity="museum">
+        <img src="image/LandACulture/museum-tour.jpg" alt="Museum Tour" class="activity__img">
+        <h3 class="activity__title">Museum Tours</h3>
+        <p>Explore Malaysia's rich history through guided museum visits.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Cultural Dances Section  -->
+  <section id="dances" class="section dances section">
+    <div class="dances__container container grid">
+      <div class="dances__data">
+        <h2 class="section__title">Experience Malaysian Traditional Dances</h2>
+        <p>Immerse yourself in the rich dance traditions of Malaysia.</p>
+        <button id="discover-dances-btn" class="button">Discover Dances</button>
+      </div>
+      <div class="dances__image">
+        <img src="image/LandACulture/cultural-dances.jpg" alt="Cultural Dances in Malaysia" class="dances__img">
+      </div>
+    </div>
+    <div id="dances-info" class="info-section hidden"></div>
+  </section>
+  
+  <!-- Cooking Class Section -->
+  <section id="cooking" class="section cooking section">
+    <div class="cooking__container container grid">
+      <div class="cooking__data">
+        <h2 class="section__title">Learn Authentic Malaysian Cuisine</h2>
+        <p>Master the art of Malaysian cooking by exploring traditional recipes and techniques, from spicy rendang to savory satay, all in a hands-on culinary experience.</p>
+        <button id="discover-cooking-btn" class="button">Explore Cooking Classes</button>
+      </div>
+      <div class="cooking__image">
+        <img src="image/LandACulture/cooking-class.jpg" alt="Cooking Classes in Malaysia" class="cooking__img">
+      </div>
+    </div>
+    <div id="cooking-info" class="info-section hidden"></div>
+  </section>
+  
+  <!-- Cultural Workshop Section -->
+  <section id="workshops" class="section workshops section">
+    <div class="workshops__container container grid">
+      <div class="workshops__data">
+        <h2 class="section__title">Explore Malaysian Cultural Arts and Crafts</h2>
+        <p>Immerse yourself in the vibrant tapestry of Malaysia's cultural arts and crafts, showcasing a rich heritage of traditional techniques and creativity that reflect the diverse influences of its people.</p>
+       <button id="discover-workshops-btn" class="button">Discover Workshops</button>
+      </div>
+      <div class="workshops__image">
+        <img src="image/LandACulture/cultural-workshop.jpg" alt="Cultural Workshops in Malaysia" class="workshops__img">
+      </div>
+    </div>
+    <div id="workshops-info" class="info-section hidden"></div>
+  </section>
+  
+  <!-- Museum Tours Section -->
+  <section id="museum" class="section museum section">
+    <div class="museum__container container grid">
+      <div class="museum__data">
+        <h2 class="section__title">Uncover Malaysia's Rich History</h2>
+        <p>Discover Malaysia's fascinating history, where ancient traditions and modern influences intertwine, offering a unique glimpse into the diverse cultures that have shaped the nation.</p>
+        <button id="discover-museums-btn" class="button">Discover Museum Tours</button>
+      </div>
+      <div class="museum__image">
+        <img src="image/LandACulture/museum-tour.jpg" alt="Museum Tours in Malaysia" class="museum__img">
+      </div>
+    </div>
+    <div id="museum-info" class="info-section hidden"></div>
+  </section>
+
+    </main>
+
+    <a href="#" id="scroll-up" class="scrollup">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="javascript/cultural.js"></script>
+</body>
+</html>

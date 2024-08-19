@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Travel</title>
+    
+    <!-- Bootstrap CSS for easy styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/navbarFooter.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    
+        <!-- Navigation Bar -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 secNavBar">
+                    <div class="navigationBarInnerContent">
+                        <a class="LOGO" href="homepage.html">
+                            <img src="image/LOGO.png" alt="Travel" title="Let's go travel" class="img-fluid">
+                        </a>
+                        <div class="nav_tab">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                            <a class="navBarLinkClass" href="AboutMalaysia.html" title="About Us">About Malaysia</a>
+                            <a class="navBarLinkClass" href="land.html" title="Land Activities">Land Activities</a>
+                            <a class="navBarLinkClass" href="WaterActivities.html" title="Water Activities">Water Activities</a>
+                            <a class="navBarLinkClass" href="cultural.html" title="Cultural Activities">Cultural Activities</a>
+                            <a class="navBarLinkClass" href="UrbanActivities.html" title="Urban Activities">Urban Activities</a>
+                            <a class="navBarLinkClass" href="Weather.html" title="Weather Tips">Weather Tips</a>
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Navigation Bar -->
+        <div class="container-fluid secNavBarMobileVersion">
+            <div class="row">
+                <div class="col-md-12 p-0">
+                    <div class="navBarDisplayFlex">
+                        <div class="hamburgerMenuSection" onclick="openNav()">
+                            <span class="designForMenuButton">&#9776;</span>
+                        </div>
+                        <div class="logoSecion">
+                            <a class="Logo" href="homepage.html">
+                                <img src="image/LOGO.png" alt="Travel" title="Travel in Malaysia" class="img-fluid mobileVersion_Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_tab" id="mobileVerNavBar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                    <a class="navBarLinkClass" href="AboutMalaysia.html" title="About Us">About Malaysia</a>
+                    <a class="navBarLinkClass" href="land.html" title="Land Activities">Land Activities</a>
+                    <a class="navBarLinkClass" href="WaterActivities.html" title="Water Activities">Water Activities</a>
+                    <a class="navBarLinkClass" href="cultural.html" title="Cultural Activities">Cultural Activities</a>
+                    <a class="navBarLinkClass" href="UrbanActivities.html" title="Urban Activities">Urban Activities</a>
+                    <a class="navBarLinkClass" href="Weather.html" title="Weather Tips">Weather Tips</a>
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Hero Section with a large background image -->
+     <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-12 hero">
+                <div class="hero-content">
+                        <h1>Discover Malaysia</h1>
+                </div>
+            </div>
+         </div>
+    </div>
+        
+  
+
+    <!-- Featured Travel Packages Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-title">Malaysia Travel Package</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="package">
+                        <img src="image/AboutMalaysia/PutrajayaSplashmania_image.jpg" alt="2D1N Putrajaya + Splashmania"> 
+                        <div class="package-title">2D1N PUTRAJAYA + SPLASHMANIA</div>
+                        <div class="package-description">Splash Mania at Gamuda Cove, 20 km from KLIA, is an 18-acre water park with 24 slides and 15 attractions, including wave pools and lazy rivers.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="package">
+                        <img src="image/AboutMalaysia/CameronHighlands_image.jpg" alt="4D3N Cameron Highlands & Kuala Lumpur"> 
+                        <div class="package-title">4D3N CAMERON HIGHLANDS & KUALA LUMPUR PACKAGE</div>
+                        <div class="package-description">Discover Kuala Lumpur's landmarks and experience the cool, scenic beauty of Cameron Highlands with tea plantations and mossy forests.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="package">
+                        <img src="image/AboutMalaysia/Kundasang_image.jpg" alt="4D3N Kundasang Ezcapade"> 
+                        <div class="package-title">4D3N KUNDASANG EZCAPADE</div>
+                        <div class="package-description">Enjoy a 4-day, 3-night retreat in Kundasang with stunning views, local attractions, and relaxing stays.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Malaysia Section with Videos -->
+    <section class="section1" id="about-malaysia">
+        <div class="container">
+            <div class="section-title">About Malaysia</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <h3>Geography</h3>
+                        <p>Malaysia is divided into two main regions: Peninsular Malaysia and East Malaysia (which includes the states of Sabah and Sarawak). The country is characterized by tropical rainforests, mountain ranges, and an extensive coastline.</p>
+                        <video controls>
+                            <source src="videos/LocationMalaysia.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <h3>Official Religion</h3>
+                        <p>Islam is the official religion of Malaysia, and it plays a significant role in the country's culture and daily life. However, Malaysia is also known for its religious tolerance, with various other religions being practiced freely.</p>
+                        <video controls>
+                            <source src="videos/official_religion.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <h3>National Language</h3>
+                        <p>Bahasa Malaysia is the official language, and it's widely spoken across the country. English is also commonly used, especially in business and tourism. Government encourages citizen to master other international languages particular.</p>
+                        
+                        <video controls>
+                            <source src="videos/national_language.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            
+                        </video>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <h3>Culture</h3>
+                        <p>Malaysia is a melting pot of cultures, with a rich heritage influenced by Malay, Chinese, Indian, and indigenous traditions. This diversity is reflected in the country's festivals, cuisine, and daily life.</p>
+                        <video controls>
+                            <source src="videos/culture_malaysia.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" style="position: fixed; bottom: 0; width: 100%; background-color: #f8f9fa; padding: 15px; text-align: center; z-index: 1000;">
+        <p>We use cookies to ensure you get the best experience on our website. <a href="#">Learn more</a>.</p>
+        <button class="btn btn-warning btn-sm" onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 Malaysia Travel. All Rights Reserved.</p>
+    </div>
+
+
+
+    <script>
+    function acceptCookies() {
+    // Hide the cookie consent banner after accept 
+            document.querySelector('.cookie-consent').style.display = 'none';
+            // Store the consent in a cookie (valid for 1 year)
+            document.cookie = "cookiesAccepted=true; max-age=31536000; path=/";
+    }
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
